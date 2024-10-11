@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Collection</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">Lego Collection</a>
+            <div class="flex space-x-4">
+                <a href="/about" class="hover:text-blue-500">About</a>
+                <div class="relative inline-block text-left">
+                    <button class="cursor-pointer">
+                        Theme
+                    </button>
+                    <ul class="dropdown-content absolute hidden bg-gray-700 mt-2 p-2 space-y-2">
+                        <li><a href="/lego/sets?theme=technic" class="hover:underline">Technic</a></li>
+                        <li><a href="/lego/sets?theme=star-wars" class="hover:underline">Marvel Avengers</a></li>
+                        <li><a href="/lego/sets?theme=city" class="hover:underline">City</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-blue-500 text-white text-center py-20">
+        <h1 class="text-5xl font-bold">Welcome the Lego Collection</h1>
+        <p class="text-4xl font-bold">See our beauty of Lego sets and themes.</p>
+        <a href="/lego/sets" class="mt-4 inline-block bg-white text-blue-500 rounded-lg px-4 py-2">View Sets</a>
+    </section>
+
+    <!-- Lego Sets Cards -->
+    <section class="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Lego Set Card 1 -->
+            <div class="card border rounded-lg overflow-hidden shadow-lg">
+                <img src="https://cdn.rebrickable.com/media/sets/31090-1.jpg" alt="Lego Set 1" class="w-full h-64 object-cover rounded-lg">
+                    <h2 class="text-xl font-bold">Lego Set Name 1</h2>
+                    <p> It's part of Technic theme of Lego Set  1.</p>
+                    <a href="/lego/sets/31090-1" class="mt-4 inline-block bg-blue-500 text-white rounded-lg px-3 py-1">View Details</a>
+               
+            </div>
+            <!-- Lego Set Card 2 -->
+            <div class="card border rounded-lg overflow-hidden shadow-lg">
+                <img src="https://cdn.rebrickable.com/media/sets/1000565740-1.jpg" alt="Lego Set 2" class="w-full h-64 object-cover rounded-lg">
+                    <h2 class="text-xl font-bold">Lego Set Name 2</h2>
+                    <p> It's part of Marvel Avengers theme of Lego Set  2.</p>
+                    <a href="/lego/sets/1000565740-1" class="mt-4 inline-block bg-blue-500 text-white rounded-lg px-3 py-1">View Details</a>
+                </div>
+            </div>
+            <!-- Lego Set Card 3 -->
+            <div class="card border rounded-lg overflow-hidden shadow-lg">
+                <img src="https://cdn.rebrickable.com/media/sets/31097-1.jpg" alt="Lego Set 3" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold">Lego Set Name 3</h2>
+                    <p> It's part of City theme of Lego Set 3.</p>
+                    <a href="/lego/sets/31097-1" class="mt-4 inline-block bg-blue-500 text-white rounded-lg px-3 py-1">View Details</a>
+                </div>
+          
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white p-4 mt-10">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Lego Collection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dropdown functionality
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.addEventListener('click', () => {
+            const dropdownContent = dropdown.querySelector('.dropdown-content');
+            dropdownContent.classList.toggle('hidden');
+        });
+    </script>
+
+
+</body>
+</html>
